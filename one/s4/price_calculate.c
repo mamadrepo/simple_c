@@ -15,16 +15,32 @@ int main()
 	int times;
 
 	char ch = 'y';
+
+	do{
+		printf("Enter wholesale: ");
+		scanf("%f", &wholesale);
+
+		printf("Enter self time: ");
+		scanf("%d", &times);
+
+		retail = price(wholesale, times);
+		show_result(wholesale, times, retail);
+
+		printf("Do you want continue? [y/n] ");
+		getchar();
+		ch = getchar();
+		getchar();
+	}while(ch == 'y');
 	return 0;
 }
 
 float price(float wholesale, int times){
 	if(times <= NUM)
 		return (wholesale + wholesale * LOW);
-	return (wholesale + wholesale * HIGH)
+	return (wholesale + wholesale * HIGH);
 }
 
 void show_result(float wholesale, int times, float retail){
-	printf("Wholesale = %f, Times = %f\n", wholesale, times);
+	printf("Wholesale = %f, Times = %d\n", wholesale, times);
 	printf("Retail = %f\n", retail);
 }
