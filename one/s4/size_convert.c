@@ -8,6 +8,28 @@ int main()
 	printf("[2] -> meter\n");
 	printf("[3] -> inch\n");
 	printf("[4] -> foot\n");
+	printf("[5] -> exit\n");
+	printf("___________\n");
+
+	float get_input;
+	int choose;
+	char ch = 1;
+
+	do{
+		printf("Enter your choose: ");
+		scanf("%d", &choose);
+		if(choose == 5)
+			break;
+		if(choose >= 1 && choose <= 4){
+			printf("Enter the value: ");
+			scanf("%f", &get_input);
+			convert(get_input, choose);
+			printf("\n");
+		}
+	}while(ch);
+
+
+		
 	return 0;
 }
 
