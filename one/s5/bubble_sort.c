@@ -32,3 +32,8 @@ void bubble(int arr[], int len){
 			}
 }
 
+void show_result(int arr[], int len){
+	for(int i = 0; i < len; i++)
+		printf("%d\n", arr[i]);
+}
+
