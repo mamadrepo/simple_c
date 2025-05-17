@@ -6,6 +6,17 @@ void show_result(int[], int);
 
 int main()
 {
+	const int size = 5;
+	int arr[size];
+
+	printf("Enter %d number\n", size);
+	get_input(arr, size);
+
+	bubble(arr, size);
+
+	printf("After sort:\n");
+
+	show_result(arr, size);
 
 	return 0;
 }
@@ -23,8 +34,8 @@ void bubble(int arr[], int len){
 	int j;
 	int item;
 
-	for(i = 0; i < len - 1; i++)
-		for(j = 0; j < len; j++)
+	for(i = len - 1; i > 0; i--)
+		for(j = 0; j < i; j++)
 			if(arr[j] > arr[j + 1]){
 				item = arr[j];
 				arr[j] = arr[j + 1];
