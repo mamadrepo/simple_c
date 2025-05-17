@@ -23,7 +23,7 @@ void bubble(int arr[], int len){
 	int j;
 	int item;
 
-	for(i = 0; i < len; i++)
+	for(i = 0; i < len - 1; i++)
 		for(j = 0; j < len; j++)
 			if(arr[j] > arr[j + 1]){
 				item = arr[j];
